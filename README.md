@@ -22,6 +22,7 @@ suspectes avec un moteur de règles configurable. Le projet n'utilise **aucun ap
 9. [Reproductibilité](#9-reproductibilité)
 10. [Démonstration (notebook)](#10-démonstration)
 11. [Limites](#11-limites)
+12. [Contribuer et licence](#12-contribuer-et-licence)
 
 ---
 
@@ -253,3 +254,8 @@ détection, évaluation et coût, puis la CLI sur un fichier inconnu. Il n'appel
 - **Charge d'alertes.** Le réglage de coût minimal signale environ un tiers des transactions (voir section 7).
 - **Convention émetteur / destinataire.** Pour un dépôt, l'émetteur est l'agent (compte débité). Un fichier qui
   suivrait une autre convention resterait lisible, mais les profils des agents et des clients y seraient mélangés.
+
+## 12. Contribuer et licence
+
+Les contributions sont bienvenues : lisez [CONTRIBUTING.md](CONTRIBUTING.md) (règles du projet, style,
+ajout d'une règle de détection). Le projet est distribué sous licence MIT ([LICENSE](LICENSE)).
