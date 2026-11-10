@@ -1,10 +1,12 @@
 # PayGuard — Rapport de projet
 
-*Programmation Python et introduction à la science des données — Master 1 IASD — binôme : [NOM 1], [NOM 2]*
+*Programmation Python et introduction à la science des données — Master 1 IASD*
 
-> **Note aux auteurs.** Ce document rassemble les éléments du rapport (8 à 12 pages une fois mis en page).
+*Auteur : **Salif Soumah** — projet réalisé individuellement (le sujet prévoit un binôme)*
+
+> **Note à l'auteur.** Ce document rassemble les éléments du rapport (8 à 12 pages une fois mis en page).
 > Tous les chiffres proviennent d'exécutions réelles : sorties brutes dans `rapport/resultats/`, figures dans
-> `rapport/figures/`. Avant la remise, complétez les champs entre crochets, relisez chaque section,
+> `rapport/figures/`. Avant la remise, complétez la section « Sources et outils », relisez chaque section,
 > **vérifiez que vous savez expliquer chaque choix** et exportez en PDF (par exemple
 > `pandoc rapport.md -o rapport.pdf`, ou copie dans un traitement de texte).
 
@@ -357,7 +359,7 @@ capacité**, et le réglage *prudent* (1 945 alertes, 45 % de précision) serait
   `logging`, `argparse`), de pandas et de Matplotlib : simple consultation.
 - Outils de développement (non requis à l'exécution) : `black` pour le formatage (lignes de 99 caractères au plus,
   limite admise par PEP 8) et `pycodestyle` pour la vérification de conformité PEP 8.
-- **[À COMPLÉTER PAR LE BINÔME, OBLIGATOIRE.]** Le sujet exige de citer toute source ou tout outil utilisé au-delà
+- **[À COMPLÉTER PAR L'AUTEUR, OBLIGATOIRE.]** Le sujet exige de citer toute source ou tout outil utilisé au-delà
   d'une simple consultation de documentation. Si un assistant de programmation (par exemple Claude, d'Anthropic) a
   servi à écrire ou à relire du code, déclarez-le ici en précisant pour quelles parties, et assurez-vous de pouvoir
   expliquer chaque ligne lors des questions individuelles.

@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = "MIT"
 license-files = ["LICENSE"]
-authors = [{ name = "Équipe PayGuard (binôme Master 1 IASD)" }]
+authors = [{ name = "Salif Soumah", email = "sumahsalif9@gmail.com" }]
 dependencies = [
     "pandas>=2.0",
     "matplotlib>=3.7",

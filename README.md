@@ -2,7 +2,7 @@
 
 **Simulation d'un système de paiement mobile (en francs guinéens) et détection de fraude par règles métier.**
 
-Projet du module *Programmation Python et introduction à la science des données* (Master 1 IASD), réalisé en binôme.
+Projet du module *Programmation Python et introduction à la science des données* (Master 1 IASD), réalisé individuellement par **Salif Soumah**.
 PayGuard est une bibliothèque Python installable. Elle génère des transactions synthétiques, modélise les comptes
 et la plateforme en objets, stocke et analyse l'historique (SQLite, pandas, Matplotlib), puis signale les opérations
 suspectes avec un moteur de règles configurable. Le projet n'utilise **aucun apprentissage automatique**.
@@ -242,7 +242,7 @@ détection, évaluation et coût, puis la CLI sur un fichier inconnu. Il n'appel
 
 ## 11. Limites
 
-- **Données synthétiques.** Les règles sont écrites par l'équipe qui connaît les scénarios. Les performances sur
+- **Données synthétiques.** Les règles sont écrites par l'auteur des scénarios. Les performances sur
   des fraudes réelles ou sur le jeu de l'enseignant seront plus faibles.
 - **Seuils absolus en GNF.** Les paliers de montant (50 000 / 150 000 GNF) supposent des montants comparables à
   ceux de la simulation. Un jeu aux montants très différents demanderait de nouveaux seuils.
