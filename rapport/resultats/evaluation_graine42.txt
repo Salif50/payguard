@@ -1,0 +1,48 @@
+Évaluation sur data/processed/transactions.csv : 122927 transactions, 1829 fraudes
+Réglage                    Alertes  Détectées  Manquées  Fausses alertes  Taux détection  Précision  Exactitude  Coût métier    
+-------------------------  -------  ---------  --------  ---------------  --------------  ---------  ----------  ---------------
+référence : aucune alerte        0          0      1829                0           0.00%      0.00%      98.51%  949 141 500 GNF
+référence : tout signaler   122927       1829         0           121098         100.00%      1.49%       1.49%   60 549 000 GNF
+regles                       40879       1743        86            39136          95.30%      4.26%      68.09%   27 281 500 GNF
+regles / seuil 1             69839       1818        11            68021          99.40%      2.60%      44.66%   34 344 500 GNF
+regles / seuil 3              6598       1153       676             5445          63.04%     17.47%      95.02%  358 999 000 GNF
+regles / seuil 4              1139        685      1144              454          37.45%     60.14%      98.70%  600 215 500 GNF
+equilibre                     9595       1266       563             8329          69.22%     13.19%      92.77%  215 359 500 GNF
+prudent                       1945        872       957             1073          47.68%     44.83%      98.35%  583 988 500 GNF
+
+Coût minimal : « regles » (27 281 500 GNF, soit 2.87% du coût sans détection)
+Rappel : l'exactitude d'un moteur qui ne signale rien serait de 98.51% — elle ne mesure pas la détection.
+
+Contribution des règles (premier réglage, parmi les alertes) :
+Règle                 Sur fraudes  Sur légitimes
+--------------------  -----------  -------------
+changement_zone               199           2299
+compte_recent_vide             41            862
+horaire_inhabituel            213            735
+montant_anormal               230           2923
+montant_eleve                1514          36995
+montant_significatif         1704          38710
+nouvel_appareil               367            405
+rafale                        468            447
+
+Détection par scénario de fraude (premier réglage) :
+Scénario            Fraudes  Détectées  Taux    Montant manqué
+------------------  -------  ---------  ------  --------------
+changement_zone         170        168  98.82%      50 500 GNF
+compte_neuf_vide        452        428  94.69%   2 320 500 GNF
+horaire_inhabituel      250        240  96.00%     778 500 GNF
+montant_eleve           153        144  94.12%     476 000 GNF
+nouvel_appareil         186        183  98.39%     232 500 GNF
+rafale                  618        580  93.85%   3 855 500 GNF
+
+Évolution mensuelle (premier réglage) :
+Réglage  Alertes  Détectées  Manquées  Fausses alertes  Taux détection  Précision  Exactitude  Coût métier  
+-------  -------  ---------  --------  ---------------  --------------  ---------  ----------  -------------
+2026-01     6348        186        10             6162          94.90%      2.93%      67.67%  4 007 500 GNF
+2026-02     5859        209        16             5650          92.89%      3.57%      68.57%  4 071 000 GNF
+2026-03     6882        264        13             6618          95.31%      3.84%      67.50%  4 422 000 GNF
+2026-04     6976        308        14             6668          95.65%      4.42%      67.93%  4 585 500 GNF
+2026-05     7386        322        17             7064          94.99%      4.36%      68.42%  5 106 500 GNF
+2026-06     7428        454        16             6974          96.60%      6.11%      68.44%  5 089 000 GNF
+
+Rapport JSON : rapport/resultats/evaluation_graine42.json

@@ -1,0 +1,51 @@
+Analyse de data/processed/transactions.csv : 122927 transactions, taux de fraude 1.49%
+
+[1] Montants par type (GNF)
+                     count       25%       50%       75%        99%
+type                                                               
+depot              33481.0  166000.0  347000.0  743500.0  4874900.0
+retrait            25849.0  121500.0  256000.0  538000.0  3570660.0
+transfert          37732.0   63500.0  140000.0  304500.0  2050190.0
+paiement_marchand  25865.0   25000.0   46500.0   87500.0   448180.0
+
+[2] Taux de fraude 0 h-5 h : 9.30% contre 1.29% le reste de la journée
+           transactions  fraudes taux_fraude
+zone                                        
+Kankan            17507      302       1.73%
+Kindia            13973      227       1.62%
+Faranah            9618      150       1.56%
+Labé              12003      184       1.53%
+Mamou              8877      132       1.49%
+Nzérékoré         13258      196       1.48%
+Conakry           35795      488       1.36%
+Boké              11896      150       1.26%
+
+[3] Le 1 % de comptes le plus actif (49 comptes) porte 19.55% du volume émis (types : {'A': np.int64(43), 'P': np.int64(5), 'M': np.int64(1)})
+
+[4] Délai depuis la transaction précédente du même émetteur (minutes)
+             transactions  delai_median_min  premier_quartile_min  troisieme_quartile_min
+est_fraude                                                                               
+légitime            83060            4401.0                1470.9                 11660.2
+frauduleuse          1654             610.2                   2.4                 10140.5
+
+[5] Fraude et ancienneté de l'émetteur
+               transactions  fraudes taux_fraude
+tranche                                         
+< 1 jour                187        9       4.81%
+1 à 7 jours             164       10       6.10%
+7 à 30 jours           2538       62       2.44%
+30 à 90 jours         40435      563       1.39%
+> 90 jours            61161      989       1.62%
+
+[6] Fraude et appareil (question libre)
+                 transactions  fraudes taux_fraude part_des_fraudes
+appareil                                                           
+appareil connu         117045     1242       1.06%           75.09%
+nouvel appareil          1000      412      41.20%           24.91%
+
+Figures : rapport/figures/montants_par_type.png, rapport/figures/fraude_heure_zone.png, rapport/figures/concentration_volume.png, rapport/figures/delai_transactions.png, rapport/figures/fraude_anciennete.png, rapport/figures/fraude_nouvel_appareil.png
+
+[Profils] Python pur vs pandas sur 122927 transactions (4999 comptes, meilleur de 5 essais)
+  résultats identiques : oui
+  Python pur : 0.114 s  |  pandas (agrégation) : 0.061 s  |  pandas (complet) : 0.095 s
+  accélération pandas : x1.9 (agrégation), x1.2 (complet)

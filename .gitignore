@@ -1,0 +1,24 @@
+# Environnements et caches Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+
+# Données générées (reproductibles : voir README, section « Reproductibilité »)
+data/
+
+# Système
+.DS_Store
+CLAUDE.md
+PAYGUARD.md
+
+.vscode/
+doc.md 
+suivi.md

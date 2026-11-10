@@ -1,0 +1,35 @@
+Évaluation sur data/validation/transactions.csv : 122433 transactions, 1825 fraudes
+Réglage                    Alertes  Détectées  Manquées  Fausses alertes  Taux détection  Précision  Exactitude  Coût métier    
+-------------------------  -------  ---------  --------  ---------------  --------------  ---------  ----------  ---------------
+référence : aucune alerte        0          0      1825                0           0.00%      0.00%      98.51%  954 907 500 GNF
+référence : tout signaler   122433       1825         0           120608         100.00%      1.49%       1.49%   60 304 000 GNF
+regles                       40290       1750        75            38540          95.89%      4.34%      68.46%   25 594 500 GNF
+equilibre                     9424       1251       574             8173          68.55%     13.27%      92.86%  222 937 500 GNF
+prudent                       2027        887       938             1140          48.60%     43.76%      98.30%  562 163 000 GNF
+
+Coût minimal : « regles » (25 594 500 GNF, soit 2.68% du coût sans détection)
+Rappel : l'exactitude d'un moteur qui ne signale rien serait de 98.51% — elle ne mesure pas la détection.
+
+Contribution des règles (premier réglage, parmi les alertes) :
+Règle                 Sur fraudes  Sur légitimes
+--------------------  -----------  -------------
+changement_zone               207           2293
+compte_recent_vide             33            846
+horaire_inhabituel            193            813
+montant_anormal               259           2897
+montant_eleve                1492          36347
+montant_significatif         1721          38102
+nouvel_appareil               395            444
+rafale                        436            449
+
+Détection par scénario de fraude (premier réglage) :
+Scénario            Fraudes  Détectées  Taux    Montant manqué
+------------------  -------  ---------  ------  --------------
+changement_zone         182        178  97.80%     146 000 GNF
+compte_neuf_vide        407        396  97.30%     877 500 GNF
+horaire_inhabituel      238        231  97.06%     409 500 GNF
+montant_eleve           192        182  94.79%     798 000 GNF
+nouvel_appareil         210        205  97.62%     443 000 GNF
+rafale                  596        558  93.62%   3 650 500 GNF
+
+Rapport JSON : rapport/resultats/evaluation_graine2026.json

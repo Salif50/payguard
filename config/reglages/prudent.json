@@ -1,0 +1,57 @@
+{
+  "description": "Réglage prudent (capacité d'analyse limitée) : aucun palier de montant, seuls les indices comportementaux comptent.",
+  "seuil_alerte": 2.0,
+  "regles": [
+    {
+      "nom": "montant_anormal",
+      "poids": 1.0,
+      "parametres": {
+        "facteur": 4.0,
+        "min_operations": 3,
+        "montant_minimum": 100000
+      }
+    },
+    {
+      "nom": "rafale",
+      "poids": 2.0,
+      "parametres": {
+        "nb_operations": 2,
+        "fenetre_minutes": 5
+      }
+    },
+    {
+      "nom": "horaire_inhabituel",
+      "poids": 1.0,
+      "parametres": {
+        "heure_debut": 0,
+        "heure_fin": 5,
+        "part_max": 0.1
+      }
+    },
+    {
+      "nom": "changement_zone",
+      "poids": 1.0,
+      "parametres": {
+        "delai_minutes": 180,
+        "min_operations": 5,
+        "part_min": 0.0
+      }
+    },
+    {
+      "nom": "nouvel_appareil",
+      "poids": 2.0,
+      "parametres": {
+        "min_operations": 2
+      }
+    },
+    {
+      "nom": "compte_recent_vide",
+      "poids": 1.0,
+      "parametres": {
+        "anciennete_max_jours": 7,
+        "part_min": 0.8,
+        "montant_minimum": 50000
+      }
+    }
+  ]
+}
