@@ -6,7 +6,7 @@
 
 > **Note à l'auteur.** Ce document rassemble les éléments du rapport (8 à 12 pages une fois mis en page).
 > Tous les chiffres proviennent d'exécutions réelles : sorties brutes dans `rapport/resultats/`, figures dans
-> `rapport/figures/`. Avant la remise, complétez la section « Sources et outils », relisez chaque section,
+> `rapport/figures/`. Avant la remise, précisez l'usage de ChatGPT (section 9), relisez chaque section,
 > **vérifiez que vous savez expliquer chaque choix** et exportez en PDF (par exemple
 > `pandoc rapport.md -o rapport.pdf`, ou copie dans un traitement de texte).
 
@@ -355,11 +355,15 @@ capacité**, et le réglage *prudent* (1 945 alertes, 45 % de précision) serait
 
 ## 9. Sources et outils
 
-- Documentation officielle de Python (`abc`, `dataclasses`, `enum`, `contextlib`, `functools`, `sqlite3`,
-  `logging`, `argparse`), de pandas et de Matplotlib : simple consultation.
-- Outils de développement (non requis à l'exécution) : `black` pour le formatage (lignes de 99 caractères au plus,
-  limite admise par PEP 8) et `pycodestyle` pour la vérification de conformité PEP 8.
-- **[À COMPLÉTER PAR L'AUTEUR, OBLIGATOIRE.]** Le sujet exige de citer toute source ou tout outil utilisé au-delà
-  d'une simple consultation de documentation. Si un assistant de programmation (par exemple Claude, d'Anthropic) a
-  servi à écrire ou à relire du code, déclarez-le ici en précisant pour quelles parties, et assurez-vous de pouvoir
-  expliquer chaque ligne lors des questions individuelles.
+Conformément au sujet, je déclare les sources et outils utilisés au-delà d'une simple consultation de
+documentation.
+
+| Source ou outil | Usage |
+|---|---|
+| Site officiel de Python ([docs.python.org](https://docs.python.org/fr/3/)) | Documentation de référence : `abc`, `dataclasses`, `enum`, `contextlib`, `functools`, `csv`, `sqlite3`, `logging`, `argparse`. |
+| **Claude** (Anthropic), via l'assistant de programmation Claude Code | Assistant de programmation utilisé pour écrire le code du paquet, les tests, la configuration du moteur, le notebook, le README et une première version de ce rapport, à partir du sujet et de mes consignes. Les résultats chiffrés proviennent tous d'exécutions réelles du code (sorties dans `rapport/resultats/`). |
+| **ChatGPT** (OpenAI) | [À préciser : pour quelles parties ou questions je l'ai utilisé.] |
+| `black`, `pycodestyle` | Outils de développement, non requis à l'exécution : mise en forme du code et vérification de la conformité PEP 8 (lignes de 99 caractères au plus). |
+
+J'ai relu le code produit avec l'aide de ces assistants, je l'ai exécuté et testé. Je m'engage à pouvoir en
+expliquer chaque partie lors de la soutenance.
