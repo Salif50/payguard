@@ -1,0 +1,10 @@
+Règle seule (paramètres de config/regles.json) sur data/processed/transactions.csv (graine 42)
+regle                  declench. sur fraudes precision detection      cout (GNF)
+montant_anormal             3598         230      6.4%     12.6%     704 604 500
+rafale                       915         468     51.1%     25.6%     839 041 000
+horaire_inhabituel          1999         217     10.9%     11.9%     857 398 500
+changement_zone             3235         201      6.2%     11.0%     841 549 000
+nouvel_appareil              772         367     47.5%     20.1%     718 528 500
+compte_recent_vide          1013          41      4.0%      2.2%     929 952 500
+montant_significatif       67031        1773      2.6%     96.9%      34 212 500
+montant_eleve              38509        1514      3.9%     82.8%      47 075 000
